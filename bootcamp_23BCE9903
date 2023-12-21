@@ -1,0 +1,20 @@
+def weather_chatbot():
+    print("Weather Chatbot: Welcome! Ask about the weather or type 'exit' to end the conversation.")
+
+    while True:
+        user_input = input("You: ").lower()
+
+        if user_input == 'exit':
+            print("Weather Chatbot: Goodbye!")
+            break
+        elif 'weather' in user_input:
+            print("Weather Chatbot: I'm a weather chatbot, and I can tell you it's always sunny in cyberspace!")
+        elif 'temperature' in user_input:
+            print("Weather Chatbot: The temperature here is a constant 1 and 0, binary style!")
+        elif 'rain' in user_input or 'rainy' in user_input:
+            print("Weather Chatbot: It's raining 404s outside.")
+        else:
+            print("Weather Chatbot: I'm not equipped to answer that. Ask me about the weather!")
+
+# Run the weather chatbot
+weather_chatbot()
