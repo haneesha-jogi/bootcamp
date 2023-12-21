@@ -18,3 +18,48 @@ def weather_chatbot():
 
 # Run the weather chatbot
 weather_chatbot()
+
+
+
+2nd program::
+import time
+print("Hello, I'm The Hypebeast Bot")
+print("I'm here to help you fine the Hypebeast items you want")
+
+name = input("What is Your Name?\n")
+time.sleep(1)
+
+print("Hello "+name)
+
+time.sleep(1)
+
+choice = input("So what can i help you find today? I know about Shoes, Hoodies and T-Shirts\n")
+time.sleep(1)
+
+if "Shoes" in choice:
+    shoes = input("Okay, what brand of shoes are you looking for?\n")
+    if "Nike" in shoes:
+        NikeModel = input("Which model are you looking for?\n")
+        if NikeModel in NikeModels_db.keys():
+            print("You can get them from " + ", Or ".join(shop for shop in NikeModels_db[NikeModel]))
+        else:
+                    print("Sorry I dont know that model")
+
+    elif "Adidas" in shoes:
+        AdidiasModel = input("What model are you looking for?\n")
+        if AdidasModel in AdidasModels_db():
+            print("You can buy that model from" + " , Or ".join(shop for shop in AdidasModels_db[AdidasModel]))
+        else:
+            print("Sorry I dont know that model")
+
+    elif "Puma" in shoes:
+        PumaModel = input("What model are you looking for?\n")
+        if PumaModel in PumaModels_db():
+            print("You can buy that model from" + " , Or ".join(shop for shop in PumaModels_db[PumaModel]))
+        else:
+            print("Sorry I dont know that model")
+
+    
+  
+    else:
+            print("Sorry, I dont have any information about that.")
